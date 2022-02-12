@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Kernal Travel</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link href="~/Content/stylesheets/main.css" rel="stylesheet" />
+    <link href="~/Content/stylesheets/materialize.min.css" rel="stylesheet" />
+
+</head>
+
+<body id="home" class="scrollspy">
+    <!----------------Navigation Bar----------------->
+    <div class="navbar-fixed">
+        <nav class="blue">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a class="brand-logo" href="@Url.Action("Index", "Home")">KarnelTravel</a>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="@Url.Action("Index", "Home")">Home</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index", "Home")">Search</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("PopularPlaces", "Home")">Popular Places</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Gallery", "Home")">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("ContactUs", "Home")">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-nav">
+        <li>
+            <a href="@Url.Action("Index", "Home")">Home</a>
+        </li>
+        <li>
+            <a href="@Url.Action("Index", "Home")">Search</a>
+        </li>
+        <li>
+            <a href="@Url.Action("PopularPlaces", "Home")">Popular Places</a>
+        </li>
+        <li>
+            <a href="@Url.Action("Gallery", "Home")">Gallery</a>
+        </li>
+        <li>
+            <a href="@Url.Action("ContactUs", "Home")">Contact</a>
+        </li>
+    </ul>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="section teal darken-2 white-text center">
+        <p class="flow-text">KarnelTravel &copy; 2021</p>
+        
+    </footer>
+
+    <script src="~/Content/scripts/materialize.min.js"></script>
+    <script src="https://kit.fontawesome.com/db5254ecc3.js" crossorigin="anonymous"></script>
+    <script>
+        // sidenav
+        const sideNav = document.querySelector('.sidenav');
+        M.Sidenav.init(sideNav, {});
+
+        //scrollspy
+        const ss = document.querySelectorAll('.scrollspy');
+        M.ScrollSpy.init(ss, {});
+    </script>
+</body>
+</html>

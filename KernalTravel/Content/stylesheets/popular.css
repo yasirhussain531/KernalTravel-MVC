@@ -1,0 +1,191 @@
+.products-container h4,
+.products-container h3 {
+    position: relative;
+    z-index: 3;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.products-container h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    color:aliceblue;
+}
+
+.products-container h4 {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.products-container {
+    width: 90%;
+    height: 100%;
+    margin: 55px;
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    left: 50px;
+}
+
+.products-container .card {
+    cursor: pointer;
+    position: relative;
+    width: 270px;
+    height: 220px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 35px;
+    background-color: teal  ;
+    border: 2px solid  cyan;
+    border-radius: 15px;
+    /* box-shadow: 0 0 7px rgba(0, 0, 0, 0.8); */
+}
+
+.product-image:before {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: linear-gradient( #2196F3, #2987d4 );
+    clip-path: polygon(0% 0%, 60% 0, 85% 50%, 60% 100%, 0% 100%);
+    transition: 0.6s ease-in-out;
+}
+
+.product-image:hover:before {
+    width: 200%;
+    clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+    transition: 1s ease-in-out;
+}
+
+.products-container .card .product-image {
+    width: 92%;
+    margin: 20px auto;
+}
+
+.products-container .card .product-image img {
+    position: relative;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.products-container .card .product-image img:hover {
+    transform: scale(1.1);
+}
+
+.products-container .card .product-info {
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.products-container .card button {
+    width: 100%;
+    padding: 10px;
+    position: inherit;
+    background: #2196F3;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* border-radius: 0 0 15px 15px; */
+}
+
+ .products-container .card button:hover {
+    background: teal ;
+} 
+
+.products-container .card button i {
+    margin-right: 10px;
+    font-size: 18px;
+    /* transform: rotateY(180deg); */
+}
+
+@media screen and (max-width: 1920px) {
+    .products-container {
+        width: 100%;
+        height: 100%;
+        margin: 50px auto;
+        padding-top: 0px;
+    }
+    .products-container .card {
+        width: 240px;
+        height: 305px;
+        margin: 24px 31px;
+    }
+    .products-container h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    .products-container h4 {
+        margin-bottom: 6px;
+        font-size: 16px;
+    }
+    .products-container .card .product-image {
+        width: 92%;
+        margin: 10px auto 0;
+    }
+    .products-container .card .product-info {
+        padding: 0 6px;
+    }
+    .products-container .card button {
+        padding: 10px;
+        font-size: 20px;
+    }
+    .products-container .card button i {
+        margin-right: 6px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .products-container .card {
+        width: 312px;
+        height: 436px;
+        margin: 24px 10px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .products-container {
+        width: 100%;
+        height: 100%;
+        margin: 25px 0 0 0;
+        padding-top: 0px;
+    }
+    .products-container .card {
+        width: 170px;
+        height: 290px;
+        margin: 0 0 25px;
+    }
+    .products-container h3 {
+        margin-bottom: 6px;
+        font-size: 14px;
+    }
+    .products-container h4 {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    .products-container .card .product-image {
+        width: 92%;
+        margin: 10px auto 0;
+    }
+    .products-container .card .product-info {
+        padding: 0 4px;
+    }
+    .products-container .card button {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .products-container .card button i {
+        margin-right: 6px;
+        font-size: 14px;
+    }
+}

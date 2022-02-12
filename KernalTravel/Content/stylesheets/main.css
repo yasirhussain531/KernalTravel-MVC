@@ -1,0 +1,32 @@
+.section-search input {
+    padding: 5px !important;
+    font-size: 18px;
+    width: 90% !important;
+    border: #f4f4f4 3px solid !important;
+}
+.slider h5 {
+    font-weight: 300;
+    color: whitesmoke;
+}
+.slider h5:hover {
+    color: teal;
+    transition: 0.2s;
+}
+#popular .card-title:hover {
+    color: black;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 2em;
+    cursor: pointer;
+
+}
+.section-follow .fa-4x {
+    margin: 5px 15px;
+
+}
+.section-follow i:hover {
+    color:black;
+    transition: 0.2s;
+    font-size: 3em;
+
+}

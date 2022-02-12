@@ -1,0 +1,49 @@
+﻿<link href="~/Content/stylesheets/contact.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Contact Us";
+}
+
+
+<script src="~/Content/scripts/materialize.min.js"></script>
+
+<!-----------------------------------------------------------------Contact------------------------------------->
+<main>
+    <div class="container">
+        <div class="row">
+            <h4 class="center"><span class="teal-text">Get In </span>Touch</h4>
+
+        </div>
+    </div>
+    <section class="contact-section">
+        <div class="contact-details">
+            <h2>Contact Details</h2>
+            <ul>
+                <li><i class="fa fa-map-marker-alt"></i><a href="https://goo.gl/maps/3vEHAdhidinTxNMQ9" target="_blank">A-486 Allama Shabbir Ahmed Usmani Rd, Block 6 Gulshan-e-Iqbal, Sindh, Karachi, Pakistan</a></li>
+                <li><i class="fa fa-phone-alt"></i><a href="tel:">0900-78601 - Telephone</a></li>
+                <li><i class="fa fa-envelope"></i><a href="">info@Karneltravel.org</a></li>
+                <li><i class="fa fa-link"></i><a href="index.html">karneltravel.com</a></li>
+            </ul>
+        </div>
+        <div class="wrapper">
+            <h2>CONTACT US</h2>
+            <form action="https://formspree.io/f/xrgrowew" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="Name" id="name" placeholder="First and Last" required minlength="3" maxlength="25" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="Email" id="email" placeholder="email@domain.tld" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="Message" id="message" rows="5" placeholder="Type your message here...."></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit"><i class="far fa-paper-plane"></i>Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
